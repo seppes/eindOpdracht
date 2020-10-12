@@ -5,3 +5,34 @@ h1{
 body{
   margin-left: 5%;
 }
+
+a{
+  height: 60px;
+  padding-top: 30px;
+  background-color: cadetblue;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  padding-left: 30px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+h1{
+  padding-top: 80px;
+}
+
+
+h2 {
+  text-align: center;
+  background-color: orange;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
