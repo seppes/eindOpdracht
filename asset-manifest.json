@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/eindOpdracht/static/css/main.4224e6eb.chunk.css",
+    "main.css": "/eindOpdracht/static/css/main.25b26534.chunk.css",
     "main.js": "/eindOpdracht/static/js/main.07740f51.chunk.js",
     "main.js.map": "/eindOpdracht/static/js/main.07740f51.chunk.js.map",
     "runtime-main.js": "/eindOpdracht/static/js/runtime-main.b3d09753.js",
@@ -8,15 +8,15 @@
     "static/js/2.3d14df54.chunk.js": "/eindOpdracht/static/js/2.3d14df54.chunk.js",
     "static/js/2.3d14df54.chunk.js.map": "/eindOpdracht/static/js/2.3d14df54.chunk.js.map",
     "index.html": "/eindOpdracht/index.html",
-    "precache-manifest.a8a11668234a1904e220dd24f298c8f7.js": "/eindOpdracht/precache-manifest.a8a11668234a1904e220dd24f298c8f7.js",
+    "precache-manifest.374908c41502d7373982343c0b74098a.js": "/eindOpdracht/precache-manifest.374908c41502d7373982343c0b74098a.js",
     "service-worker.js": "/eindOpdracht/service-worker.js",
-    "static/css/main.4224e6eb.chunk.css.map": "/eindOpdracht/static/css/main.4224e6eb.chunk.css.map",
+    "static/css/main.25b26534.chunk.css.map": "/eindOpdracht/static/css/main.25b26534.chunk.css.map",
     "static/js/2.3d14df54.chunk.js.LICENSE.txt": "/eindOpdracht/static/js/2.3d14df54.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b3d09753.js",
     "static/js/2.3d14df54.chunk.js",
-    "static/css/main.4224e6eb.chunk.css",
+    "static/css/main.25b26534.chunk.css",
     "static/js/main.07740f51.chunk.js"
   ]
 }
