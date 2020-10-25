@@ -1,6 +1,6 @@
-import React from 'react';
 import './App.css';
 import styled from "@emotion/styled";
+import React, {useState} from 'react';
 
 function Kamers(props) {
     const {kamer} = props;
@@ -15,7 +15,7 @@ function Landen(props) {
     const {landen} = props;
     return <div className="productLine">
         <div>{landen.land}</div>
-        <div>{landen.aantalHotels}</div>
+        <div>{landen.aantalHotelsBeschikbaar}</div>
     </div>;
 }
 
@@ -62,7 +62,7 @@ const StyleNavLink = styled.a`
   text-align: center;
 `;
 
-const StyleProductLine = styled.div`
+const StyleList = styled.div`
 padding-bottom: 60px;
 & div {
        display: -webkit-box;
@@ -79,27 +79,31 @@ const KAMER_DETAILS = [
 ];
 
 const LANDEN = [
-    {land: "Belgie", aantalHotels: 6},
-    {land: "Nederland", aantalHotels: 3},
-    {land: "Frankrijk", aantalHotels: 4},
+    {land: "Belgie", aantalHotelsBeschikbaar: 6},
+    {land: "Nederland", aantalHotelsBeschikbaar: 3},
+    {land: "Frankrijk", aantalHotelsBeschikbaar: 4},
 ];
 
 function App() {
+    const [inputValue, setInputValue] = useState("zoekfunctie die nog niet af is");
     return (
         <div id="root">
             <StyleNav><StyleNavLink href="/">ez bookings</StyleNavLink></StyleNav>
 
-            <StyleProductLine>
+            <StyleList>
                 <StyleH1>Hotel</StyleH1>
                 {KAMER_DETAILS.map((k) =>
                     <Kamers key={k.soort} kamer={k}/>)}
-            </StyleProductLine>
-            <StyleProductLine>
+            </StyleList>
+            <StyleList>
                 <StyleH1>Landen</StyleH1>
                 {LANDEN.map((l) =>
                     <Landen key={l.land} landen={l}/>)}
-            </StyleProductLine>
+            </StyleList>
             <button onClick={() => alert('hallo test test')}>click</button>
+            <h2>input field</h2>
+            <input value={inputValue} onChange={(e) => setInputValue(e.target.value)}/>
+            <p>u zocht het hotel : {inputValue}</p>
             <StyleFooter><p>ez bookings copyright 2020</p></StyleFooter>
         </div>
     );
