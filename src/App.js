@@ -44,13 +44,14 @@ const StyleFooter = styled.div`
   text-align: center;
   background-color: lightblue;
   color: white;
-  position: absolute;
   left: 0;
   bottom: 0;
   height: 50px;
   width: 100%;
-  margin-block-start: 0em;
-  margin-block-end: 0em;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  position:fixed ;
+  margin-top: 50px;
 `;
 
 const StyleNavLink = styled.a`
@@ -60,6 +61,10 @@ const StyleNavLink = styled.a`
   text-decoration: none;
   text-align: center;
 `;
+ const StyleProductLine = styled.div`
+padding-bottom: 60px;
+`;
+
 
 const KAMER_DETAILS = [
     {soort: "eenpersoons kamer", aantalPersonen: 1, prijs: 50},
@@ -79,16 +84,16 @@ function App() {
     return (
         <div id="root">
             <StyleNav><StyleNavLink href="/">ez bookings</StyleNavLink></StyleNav>
-            <div>
+            <StyleProductLine>
                 <StyleH1>Hotel</StyleH1>
                 {KAMER_DETAILS.map((k) =>
                     <Kamers key={k.soort} kamer={k}/>)}
-            </div>
-            <div>
+            </StyleProductLine>
+            <StyleProductLine>
                 <StyleH1>Landen</StyleH1>
                 {LANDEN.map((l) =>
                     <Landen key={l.land} landen={l}/>)}
-            </div>
+            </StyleProductLine>
             <StyleFooter><p>ez bookings copyright 2020</p></StyleFooter>
         </div>
     );
