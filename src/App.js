@@ -61,10 +61,14 @@ const StyleNavLink = styled.a`
   text-decoration: none;
   text-align: center;
 `;
- const StyleProductLine = styled.div`
-padding-bottom: 60px;
-`;
 
+const StyleProductLine = styled.div`
+padding-bottom: 60px;
+& div {
+       display: -webkit-box;
+       padding-right: 20px;
+  }
+`;
 
 const KAMER_DETAILS = [
     {soort: "eenpersoons kamer", aantalPersonen: 1, prijs: 50},
@@ -84,6 +88,7 @@ function App() {
     return (
         <div id="root">
             <StyleNav><StyleNavLink href="/">ez bookings</StyleNavLink></StyleNav>
+
             <StyleProductLine>
                 <StyleH1>Hotel</StyleH1>
                 {KAMER_DETAILS.map((k) =>
@@ -94,6 +99,7 @@ function App() {
                 {LANDEN.map((l) =>
                     <Landen key={l.land} landen={l}/>)}
             </StyleProductLine>
+            <button onClick={() => alert('hallo test test')}>click</button>
             <StyleFooter><p>ez bookings copyright 2020</p></StyleFooter>
         </div>
     );
